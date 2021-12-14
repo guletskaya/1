@@ -1,22 +1,18 @@
 require 'prime'
-def prime?(num)
-    num.prime?
-end
+
 def num(n)
-prim=1
+  prim=1
   counter=3
   (7..104800).each do |k|
-    if prime?(k)
+    if k.prime?
       counter+=1
       if counter==n then 
-      prim=k
-         
+        prim=k
         break 
+      end
     end
   end
-
-end
 puts("#{counter} prime is #{prim}")
-return prim
-  end
+prim
+end
 num(10001)
