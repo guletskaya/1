@@ -1,5 +1,5 @@
 def number(n)
-  m="73167176531330624919225119674426574742355349194934
+  m = "73167176531330624919225119674426574742355349194934
   96983520312774506326239578318016984801869478851843
   85861560789112949495459501737958331952853208805511
   12540698747158523863050715693290963295227443043557
@@ -19,16 +19,16 @@ def number(n)
   84580156166097919133875499200524063689912560717606
   05886116467109405077541002256983155200055935729725
   71636269561882670428252483600823257530420752963450"
-  arr=m.split(//)
-  a=0
-  b=n-1
-  max=1
-  number=1
-  while b<arr.length do
-    ar=nil
-    arr1=""
-    product=1          
-    ar=[arr[a].to_i,
+  arr = m.split(//)
+  a = 0
+  b = n-1
+  max = 1
+  number = 1
+  while b < arr.length 
+    ar = nil
+    arr1 = ""
+    product = 1          
+    ar = [arr[a].to_i,
         arr[a+1].to_i,
         arr[a+2].to_i,
         arr[a+3].to_i,
@@ -42,14 +42,14 @@ def number(n)
         arr[a+11].to_i, 
         arr[b].to_i]
     ar.each do |i|
-      product*=i
-      arr1+=i.to_s
-      a+=1
-      b+=1
+      product *= i
+      arr1 += i.to_s
+      a += 1
+      b += 1
     end
-    if max<product
+    if max < product
       number = arr1.to_i
-      max=product
+      max = product
     end
   end
   puts "The #{n} adjacent digits in the 1000-digit number that have the greatest product are #{number}. The value of this product is #{max}"
