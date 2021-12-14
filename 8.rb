@@ -27,21 +27,32 @@ def number(n)
   while b<arr.length do
     ar=nil
     arr1=""
-    product=1
-    ar=[arr[a].to_i, arr[a+1].to_i,arr[a+2].to_i,arr[a+3].to_i,arr[a+4].to_i,arr[a+5].to_i,arr[a+6].to_i,arr[a+7].to_i,arr[a+8].to_i,arr[a+9].to_i,arr[a+10].to_i,arr[a+11].to_i, arr[b].to_i]
-    ar.each{ |i|
-
+    product=1          
+    ar=[arr[a].to_i,
+        arr[a+1].to_i,
+        arr[a+2].to_i,
+        arr[a+3].to_i,
+        arr[a+4].to_i,
+        arr[a+5].to_i,
+        arr[a+6].to_i,
+        arr[a+7].to_i,
+        arr[a+8].to_i,
+        arr[a+9].to_i,
+        arr[a+10].to_i,
+        arr[a+11].to_i, 
+        arr[b].to_i]
+    ar.each do |i|
       product*=i
       arr1+=i.to_s
-
       a+=1
       b+=1
-    }
+    end
     if max<product
       number = arr1.to_i
       max=product
     end
   end
   puts "The #{n} adjacent digits in the 1000-digit number that have the greatest product are #{number}. The value of this product is #{max}"
+  max
 end
 number(13)
